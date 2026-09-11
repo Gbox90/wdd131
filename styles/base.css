@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+	font-family: 'Marvel', sans-serif;
+}
+
+:root {
+	--primary-color: #3498db;
+	--secondary-color: lab(93.26% -25.1 -5.87);
+	--background-color: #f4f4f4;
+	--text-color: #222;
+	--accent-color: hsl(6, 63%, 73%);
+}
+
+header {
+	background-color: var(--primary-color);
+	color: white;
+}
+
+nav {
+	background-color: var(--secondary-color);
+	border: 1px solid var(--accent-color);
+	display: flex;
+	justify-content: space-evenly
+}
+
+nav a:hover {
+	background-color: var(--accent-color);
+}
+
+
+
+body {
+	background-color: var(--background-color);
+	font-family: var(--font-family);
+	line-height: 1.6;
+	color: var(--text-color);
+}
+
+#course-title {
+	display: block;
+	text-align: center;
+	padding: 20px;
+}
+
+main {
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	gap: 10px;
+}
+
+main h1 {
+	grid-column: 1 / -1;
+	text-align: center;
+}
+
+.card {
+	border: 1px solid var(--primary-color);
+	border-radius: 15px;
+	background-color: white;
+	padding: 1.5rem;
+}
+
+.card h2 {
+	border-bottom: 1px solid var(--primary-color);
+	background-color: var(--primary-color);
+	text-align: center;
+	padding: 0.5rem;
+	border-radius: 6px;
+}
+
+.about-content {
+	display: grid;
+	grid-template-columns: 1fr auto;
+	gap: 1rem;
+}
+
+.about-content img {
+	width: 150px;
+	height: auto;
+}
+
+.location-content {
+	display: grid;
+	grid-template-columns: auto 1fr;
+	gap: 1rem;
+}
+
+.card h3 {
+	text-align: center;
+	border-bottom: 1px solid var(--primary-color);
+	padding-bottom: 0.25rem;
+}
+
+.location-content img {
+	width: 200px;
+	height: auto;
+}
+

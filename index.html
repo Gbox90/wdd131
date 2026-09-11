@@ -3,9 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 131 BYU- Idaho</title>
+    <title>WDD 131 - Dynamic Web Fundamentals - Greisa Cajas</title>
+    <meta name="description" content="WDD 131 BYU- Idaho", Greisa Cajas, Webpage project for WDD 131 class.">
+    <meta name="author" content="Greisa Cajas">
+
+    <!--Google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marvel:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="styles/base.css">
+    <script src="scripts/getdates.js" defer></script>
 </head>
 <body>
-    WDD 131
+    <header>
+        <span id="course-title">WDD 131 - Dynamic Web Fundamentals</span>
+    
+        <nav>
+                <a href="https://www.linkedin.com/in/greisa-cajas/">LinkedIn</a>
+                <a href="https://byupw.instructure.com">Canvas</a>
+                <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/7?lang=eng&id=p11-p12#p11">Scripture</a>
+                <a href="project/">Final Project</a>
+        </nav>
+    </header>
+
+
+    <main>
+        <h1>Greisa Cajas</h1>
+        <section class="card">
+            <h2>About Me</h2>
+            
+            <div class="about-content">
+            <p>Hello! I'm Greisa Cajas, going into my 3rd block with BYU Pathways. I'm originally from Provo, Utah and have been living in the Orlando, Florida area for over 20 years. I'm looking forward to learning more in this class and to continue getting closer to completing my degree! </p>
+            <img src="images/profile-pic.jpg" alt="Picture of Greisa Cajas" width="150px">
+            </div>
+            <br>
+            <h3>Orlando, FL</h3>
+            
+            <div class="location-content">
+            <img src="images/orlando-skyline.jpg" alt="Downtown Orlando skyline">
+            <p>Orlando offers a wide array of activities beyond its famous theme parks. You can explore the beautiful Harry P. Leu Gardens or enjoy a day at Lake Eola Park in the heart of downtown. For art enthusiasts, the Orlando Museum of Art and the Dr. Phillips Center for the Performing Arts offer cultural experiences.</p>
+            </div>
+        </section>
+        <section class="card">
+            <h2>Web Dev Resources</h2>
+            <div class="resources">
+            <ul>
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>JavaScript</li>
+                <li>Responsive Design</li>
+            </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            ©<span id="currentyear"></span> Greisa Cajas. USA.</p>
+        <p><span id="lastModified"></span></p>
+    </footer>
 </body>
 </html>
