@@ -99,3 +99,6 @@ main h1 {
 	height: auto;
 }
 
+footer {
+	background-color: var(--primary-color);
+}
