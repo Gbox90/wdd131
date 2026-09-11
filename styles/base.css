@@ -6,7 +6,7 @@
 }
 
 :root {
-	--primary-color: #3498db;
+	--primary-color: hwb(204 25% 3%);
 	--secondary-color: lab(93.26% -25.1 -5.87);
 	--background-color: #f4f4f4;
 	--text-color: #222;
