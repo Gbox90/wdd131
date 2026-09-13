@@ -1,0 +1,35 @@
+@media screen and (min-width: 600px) {
+
+    main {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media screen and (min-width: 900px) {
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #menu {
+        display: none;
+    }
+
+    nav {
+        display: flex;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+    }
+
+    main {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}

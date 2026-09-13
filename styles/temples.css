@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: montserrat, sans-serif;
+}
+
+header {
+    background-color:blanchedalmond;
+    color: black;
+    padding: 1rem;
+    position: relative;
+}
+
+#temple-album {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+#menu {
+    display: block;
+    position: absolute;
+    top: 0.75rem;
+    right: 1rem;
+    font-size: 2rem;
+    border: none;
+    background: none;
+    color: black;
+    cursor: pointer;
+}
+
+#menu::before {
+    content: "\2630"; /* Unicode character for hamburger menu */
+}
+
+#menu.open::before {
+    content: "X"; /* Change to "X" when menu is open */
+}
+
+nav ul {
+    display: none;
+    flex-direction: column;
+    list-style: none;
+}
+
+nav ul.open {
+    display: flex;
+}
+
+nav a {
+    display:block;
+    color:aliceblue
+    text-decoration: none;
+    text-align: center;
+    padding: 1rem;
+}
+
+nav a:hover {
+    background-color: oklch(71.313% 0.16423 50.478 / 0.555)
+}
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+h1 {
+    grid-column: 1 / -1;
+    text-align: center;
+}
+
+figure {
+    text-align: center;
+}
+
+figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+figcaption {
+    margin-top: 0.5rem;
+}
+
+footer {
+    background-color: blanchedalmond;
+    color: black;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
