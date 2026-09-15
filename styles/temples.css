@@ -33,21 +33,25 @@ header {
 }
 
 #menu::before {
-    content: "\2630"; /* Unicode character for hamburger menu */
+    content: "\2630";
 }
 
 #menu.open::before {
-    content: "X"; /* Change to "X" when menu is open */
+    content: "X";
 }
 
-nav ul {
+nav {
     display: none;
     flex-direction: column;
     list-style: none;
 }
 
-nav ul.open {
+nav.open {
     display: flex;
+}
+
+nav ul {
+    list-style: none;
 }
 
 nav a {
