@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Place I'd like to Visit: Italy</I></title>
+    <meta name="description" content="Information about a place I would like to visit called Italy. Shows various facts and the current weather">
+    <meta name="author" content="Greisa Cajas">
+
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+
+<body>
+    <header>Italy</header>
+
+    <main>
+        <div class="hero">
+            <picture>
+                <source srcset="images/italy-large.webp" media="(min-width: 1000px)">
+                <source srcset="images/italy-medium.webp" media="(min-width: 600px)">
+                <img src="images/italy-small.webp" alt="Scenic landscape of Italy" width="500" height="205">
+
+            </picture>
+        </div>
+
+        <section class="data">
+            <h2>Data</h2>
+
+            <div class="info-row">
+                <span class="label">Area:</span>
+                <span>301,340 sq km</span>
+            </div>
+
+            <div class="info-row">
+                <span class="label">Population:</span>
+                <span>58.9 million</span>
+            </div>
+
+            <div class="info-row">
+                <span class="label">Capital:</span>
+                <span>Rome</span>
+            </div>
+
+            <div class="info-row">
+                <span class="label">Language:</span>
+                <span>Italian</span>
+            </div>
+
+            <div class="info-row">
+                <span class="label">Currency:</span>
+                <span>Euro (€)</span>
+            </div>
+
+            <div class="info-row">
+                <span class="label">Time Zone:</span>
+                <span>CET</span>
+            </div>
+
+            <div class="info-row">
+                <span class="label">Internet TLD:</span>
+                <span>.it</span>
+            </div>
+        </section>
+
+        <section class="weather">
+            <h2>Weather</h2>
+
+            <img
+            class="weather-icon" 
+            src="images/weather.svg"
+            alt="Partly cloudy"
+            width="64"
+            height="64">
+
+            <div class="info-row">
+            <span class="label">Temperature:</span>
+            <span>8 °C</span>
+        </div>
+
+        <div class="info-row">
+            <span class="label">Conditions:</span>
+            <span>Partly Cloudy</span>
+        </div>
+
+        <div class="info-row">
+            <span class="label">Wind:</span>
+            <span>1 km/h</span>
+        </div>
+
+        <div class="info-row">
+            <span class="label">Wind Chill:</span>
+            <span id="windchill"></span>
+        </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>
+        © <span id="currentyear"></span>
+        Greisa Cajas | Italy
+    </p>
+
+    <p id="lastModified"></p>
+
+    </footer>
+    
+</body>
+</html>
