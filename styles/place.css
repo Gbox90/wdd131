@@ -76,7 +76,8 @@ h1 {
 }
 
 footer {
-    background-color: var(--primary-color);
+    border-top: 3px solid var(--accent-color);
+    background-color: black;
     color: white;
     text-align: center;
     padding: 1rem;
