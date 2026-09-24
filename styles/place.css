@@ -52,7 +52,7 @@ h1 {
 
 .info row {
     display: grid;
-    grid-template-columns: 1fr, 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 0.75rem;
     margin: 0.5rem 0; 
 }
