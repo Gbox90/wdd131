@@ -1,0 +1,92 @@
+
+:root {
+    /* Main Florida palette */
+    --orange: #E9783D;
+    --orange-dark: #C95B2B;
+    --cream: #FFF4DC;
+    --cream-dark: #F2DFC0;
+
+    --palm-green: #264D36;
+    --leaf-green: #4F6F44;
+    --sage: #A5B48A;
+
+    --mustard: #D8A63A;
+    --coral: #DD6B59;
+    --sky: #8DB9B2;
+
+    --brown: #593E2E;
+    --ink: #292D25;
+    --white: #FFFDF7;
+
+    /* Layout */
+    --max-width: 1200px;
+    --radius: 24px;
+    --small-radius: 12px;
+
+    /* Retro border and shadow */
+    --border: 3px solid var(--palm-green);
+    --shadow: 6px 6px 0 var(--palm-green);
+}
+
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "DM Sans", Arial, sans-serif;
+    background-color: var(--cream);
+    color: var(--ink);
+    margin: 0;
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--palm-green);
+    color: var(--white);
+    text-align: center;
+    padding: 40px 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+main {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+section {
+    background-color: var(--white);
+    border: var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 25px;
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: var(--palm-green);
+    border-bottom: 3px solid var(--orange);
+    padding-bottom: 10px;
+}
+
+h3 {
+    color: var(--orange-dark);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+footer {
+    background-color: var(--palm-green);
+    color: var(--white);
+    text-align: center;
+    padding: 20px;
+}
