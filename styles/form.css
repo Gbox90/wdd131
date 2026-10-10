@@ -1,0 +1,235 @@
+
+:root {
+    --navy: #0D1525;
+    --panel: #18263B;
+    --cyan: #67E8F9;
+    --orange: #FF9B42;
+    --button: #DB6527;
+    --button-hover: #B84D18;
+    --white: #E8F2F7;
+    --muted: #BED3E2;
+    --border: #4B6B83;
+
+    --heading-font: "Orbitron", Arial, sans-serif;
+    --body-font: "Roboto", Arial, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background-color: var(--navy);
+    color: var(--white);
+    font-family: var(--body-font);
+    line-height: 1.6;
+}
+
+header {
+    text-align: center;
+    padding: 2.5rem 1rem;
+    border-bottom: 3px solid var(--orange);
+}
+
+.eyebrow {
+    color: var(--cyan);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+h1 {
+    font-family: var(--heading-font);
+    color: var(--orange);
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin: 0.5rem 0;
+    text-shadow: 2px 2px 0 #713814;
+}
+
+header p {
+    color: var(--muted);
+}
+
+main {
+    max-width: 650px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+form,
+.confirmation {
+    background-color: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 5px 24px #00000040;
+}
+
+.form-group {
+    margin-bottom: 1.75rem;
+}
+
+.form-group > label,
+legend {
+    display: block;
+    color: var(--cyan);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.optional {
+    display: block;
+    color: var(--muted);
+    font-size: 0.85rem;
+    font-weight: 400;
+}
+
+fieldset {
+    border: 0;
+    padding: 0;
+    margin-left: 0;
+    margin-right: 0;
+    min-width: 0;
+}
+
+select,
+input[type="date"],
+input[type="text"],
+textarea {
+    display: block;
+    width: 100%;
+    padding: 0.85rem;
+    background-color: var(--navy);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    color: var(--white);
+    font: inherit;
+    color-scheme: dark;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.rating-options {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.25rem;
+}
+
+.rating-options label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--orange);
+    font-size: 0.85rem;
+    cursor: pointer;
+}
+
+.rating-options span {
+    white-space: nowrap;
+}
+
+.rating-options input,
+.checkbox-group input {
+    accent-color: var(--cyan);
+    width: 18px;
+    height: 18px;
+}
+
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    cursor: pointer;
+}
+
+.submit-button,
+.return-link {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--button);
+    color: #FFFFFF;
+    border: 0;
+    border-radius: 6px;
+    font-family: var(--heading-font);
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.submit-button:hover,
+.return-link:hover {
+    background-color: var(--button-hover);
+}
+
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+a:focus-visible {
+    outline: 3px solid var(--cyan);
+    outline-offset: 3px;
+}
+
+.confirmation {
+    text-align: center;
+}
+
+.confirmation h2 {
+    font-family: var(--heading-font);
+    color: var(--orange);
+}
+
+#review-counter {
+    color: var(--cyan);
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 0.25rem;
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 1.75rem 1rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    main {
+        margin: 1rem auto;
+        padding: 0 0.75rem;
+    }
+
+    form,
+    .confirmation {
+        padding: 1.25rem;
+    }
+
+    .rating-options label {
+        font-size: 0.7rem;
+    }
+}

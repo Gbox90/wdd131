@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review Form</title>
+    <meta name="description" content="Write a review for a product you have used.">
+    <meta name="author" content="Greisa Cajas">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet">
+
+    <link rel="stylesheet" href="form.css">
+    <script src="form.js" defer></script>
+</head>
+<body>
+    <header>
+    <p class="eyebrow">HILL VALLEY PRODUCT LABS</p>
+    <h1>Product Review</h1>
+    <p>Tell us about your experience — past, present, or future.</p>
+    </header>
+    <main>
+        <form method="get" action="review.html" id="review-form">
+            
+            <div class="form-group">
+                <label for="product">Product Name *</label>
+                <select id="product" name="product" required>
+                    <option value="" disable selected>
+                        Select a Product...
+                    </option>
+                </select>
+            </div>
+
+        <fieldset class="form-group">
+            <legend>Overall Rating *</legend>
+
+            <div class="rating-options">
+                <label for="rating1">
+                    <input type="radio" id="rating1" name="rating" value="1" required>
+                    <span>1 ☆</span>
+                </label>
+                <label for="rating2">
+                    <input type="radio" id="rating2" name="rating" value="2" required>
+                    <span>2 ☆☆</span>
+                </label>
+                <label for="rating3">
+                    <input type="radio" id="rating3" name="rating" value="3" required>
+                    <span>3 ☆☆☆</span>
+                </label>
+                <label for="rating4">
+                    <input type="radio" id="rating4" name="rating" value="4" required>
+                    <span>4 ☆☆☆</span>
+                </label>
+                <label for="rating5">
+                    <input type="radio" id="rating5" name="rating" value="5" required>
+                    <span>5 ☆☆☆☆☆</span>
+                </label>
+            </div>
+
+            <div class="form-group">
+                <label for="install-date"> Date of Installation *</label>
+                <input type="date" id="install-date" name="installation" required>
+            </div>
+
+            <label for="performance">
+                <input type="checkbox" id="performance" name="features" value="performance">
+                Performance
+            </label>
+            <label for="design">
+                <input type="checkbox" id="design" name="features" value="design">
+                Design
+            </label>
+        </fieldset>
+
+        <div class="form-group">
+            <label for="written-review">
+                Written Review
+                <span class="optional">(Optional)</span>
+            </label>
+
+            <textarea id="written-review" name="review" rows="5" placeholder="Write your review here..."></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="user-name">
+                Your Name
+                <span class="optional">(Optional)</span>
+            </label>
+            <input type="text" id="user-name" name="username" autocomplete="name" placeholder="Enter your name">
+        </div>
+
+        <input type="submit" value="Send it! Unless you're too chicken!" class="submit-button">
+
+
+               
+
+                    
+            
+        </form>
+
+    </main>
+    <footer>
+        <p>&copy; <span id="currentyear"></span> | Greisa Cajas | WDD 131</p>
+        <p id="lastModified"></p>
+    </footer>
+
+</body>
+</html>
