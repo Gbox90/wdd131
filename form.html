@@ -13,8 +13,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700&family=Roboto:wght@400;500;700&display=swap"
       rel="stylesheet">
 
-    <link rel="stylesheet" href="form.css">
-    <script src="form.js" defer></script>
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="scripts/form.js" defer></script>
 </head>
 <body>
     <header>
@@ -64,16 +64,48 @@
                 <label for="install-date"> Date of Installation *</label>
                 <input type="date" id="install-date" name="installation" required>
             </div>
-
-            <label for="performance">
-                <input type="checkbox" id="performance" name="features" value="performance">
-                Performance
-            </label>
-            <label for="design">
-                <input type="checkbox" id="design" name="features" value="design">
-                Design
-            </label>
         </fieldset>
+
+    <fieldset class="form-group">
+        <legend>
+        Which features did you find useful?
+        <span class="optional">(Check all that apply)</span>
+        </legend>
+
+    <div class="checkbox-group">
+        <label for="durability">
+            <input type="checkbox"
+                   id="durability"
+                   name="features"
+                   value="durability">
+            Durability
+        </label>
+
+        <label for="ease">
+            <input type="checkbox"
+                   id="ease"
+                   name="features"
+                   value="ease-of-use">
+            Ease of Use
+        </label>
+
+        <label for="performance">
+            <input type="checkbox"
+                   id="performance"
+                   name="features"
+                   value="performance">
+            Performance
+        </label>
+
+        <label for="design">
+            <input type="checkbox"
+                   id="design"
+                   name="features"
+                   value="design">
+            Design
+        </label>
+    </div>
+</fieldset>
 
         <div class="form-group">
             <label for="written-review">
@@ -81,7 +113,7 @@
                 <span class="optional">(Optional)</span>
             </label>
 
-            <textarea id="written-review" name="review" rows="5" placeholder="Write your review here..."></textarea>
+            <textarea id="written-review" name="review" rows="5" placeholder="Write your thoughts here, McFly..."></textarea>
         </div>
 
         <div class="form-group">
@@ -89,7 +121,7 @@
                 Your Name
                 <span class="optional">(Optional)</span>
             </label>
-            <input type="text" id="user-name" name="username" autocomplete="name" placeholder="Enter your name">
+            <input type="text" id="user-name" name="username" autocomplete="name" placeholder="Calvin Klein">
         </div>
 
         <input type="submit" value="Send it! Unless you're too chicken!" class="submit-button">

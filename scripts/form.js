@@ -27,6 +27,7 @@ const products = [
     }
 ];
 
+const productSelect = document.querySelector("#product");
 
 products.forEach((product) => {
     const option = document.createElement("option");
