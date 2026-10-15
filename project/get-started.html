@@ -117,168 +117,164 @@
                         playing outdoors.
                     </p>
                 </article>
+            </div>
+        </section>
 
 
-                <section class="learning-section">
+        <section class="learning-section">
 
-                    <h2>Before Your First Game</h2>
+            <h2>Before Your First Game</h2>
+
+            <p>
+                Feeling a little nervous? That's normal!
+                These simple steps can help you feel
+                more comfortable on the court.
+            </p>
+
+            <div class="scoring-box">
+
+                <h3>Your First-Game Game Plan</h3>
+
+                <ol>
+                    <li>
+                        Find a local court that welcomes
+                        beginners or offers open play.
+                    </li>
+                    <li>
+                        Review the serving and
+                        two-bounce rules.
+                    </li>
+                    <li>
+                        Arrive early enough to warm up
+                        and practice hitting the ball.
+                    </li>
+                    <li>
+                        Let other players know you're
+                        still learning.
+                    </li>
+                    <li>
+                        Focus on having fun instead of
+                        winning every rally.
+                    </li>
+                </ol>
+
+            </div>
+
+
+            <p>
+                Looking for somewhere to play?
+                Visit the
+                <a href="https://usapickleball.org/" target="_blank" rel="noopener noreferrer">
+                    USA Pickleball website
+                </a>
+                for resources to help you find
+                opportunities to play.
+            </p>
+
+
+        </section>
+
+
+        <section class="learning-section checklist-section">
+            <h2>Build Your First-Game Checklist</h2>
+
+            <p>
+                Every beginner starts somewhere!
+                Answer a few questions to create
+                a checklist for your first game.
+            </p>
+
+            <form id="checklist-form">
+
+                <fieldset>
+                    <legend>How much pickleball have you played?</legend>
+
+                    <label>
+                        <input type="radio" name="experience" value="new" required>
+                        I'm brand new!
+                    </label>
+
+                    <label>
+                        <input type="radio" name="experience" value="some">
+                        I've played a few times.
+                    </label>
+                </fieldset>
+
+                <div class="form-group">
+                    <label for="playing-location">Where will you be playing?</label>
+                    <select id="playing-location" name="location" required>
+                        <option value=""> Choose your court</option>
+                        <option value="indoor">Indoor Court</option>
+                        <option value="outdoor">Outdoor Court</option>
+                        <option value="unsure">Not sure yet</option>
+                    </select>
+                </div>
+
+
+                <fieldset>
+                    <legend>Do you already have a pickleball paddle?</legend>
+
+                    <label>
+                        <input type="radio" name="paddle" value="yes" required>
+                        Yes, I'm ready!
+                    </label>
+
+                    <label>
+                        <input type="radio" name="paddle" value="no">
+                        Not yet, I need one.
+                    </label>
+                </fieldset>
+
+
+                <button type="submit" class="button">
+                    Create My Checklist
+                </button>
+
+            </form>
+
+            <div id="checklist-result" class="checklist-result" aria-live="polite" hidden>
+
+                <h3>Your First-Game Checklist</h3>
+
+                <ul id="personalized-list"></ul>
+
+
+                <aside id="paddle-recommendation" class="paddle-recommendation" hidden>
+
+                    <h4>Need a Paddle? We've Got a Pick!</h4>
 
                     <p>
-                        Feeling a little nervous? That's normal!
-                        These simple steps can help you feel
-                        more comfortable on the court.
+                        Getting started doesn't have to mean
+                        spending a fortune. Friday Pickleball
+                        offers beginner-friendly carbon-fiber
+                        paddles at an affordable price.
                     </p>
 
-                    <div class="scoring-box">
-
-                        <h3>Your First-Game Game Plan</h3>
-
-                        <ol>
-                            <li>
-                                Find a local court that welcomes
-                                beginners or offers open play.
-                            </li>
-                            <li>
-                                Review the serving and
-                                two-bounce rules.
-                            </li>
-                            <li>
-                                Arrive early enough to warm up
-                                and practice hitting the ball.
-                            </li>
-                            <li>
-                                Let other players know you're
-                                still learning.
-                            </li>
-                            <li>
-                                Focus on having fun instead of
-                                winning every rally.
-                            </li>
-                        </ol>
-
-                    </div>
-
+                    <p class="paddle-deal">
+                        2 Friday Original Paddles for $99!
+                    </p>
 
                     <p>
-                        Looking for somewhere to play?
-                        Visit the
-                        <a href="https://usapickleball.org/" target="_blank" rel="noopener noreferrer">
-                            USA Pickleball website
-                        </a>
-                        for resources to help you find
-                        opportunities to play.
+                        Perfect for bringing a friend along
+                        or keeping an extra paddle handy.
                     </p>
 
+                    <a href="https://fridaypickle.com/products/friday-paddle" target="_blank" rel="noopener noreferrer"
+                        class="button">
+                        Check Out Friday Paddles
+                    </a>
 
-                </section>
-
-
-                <section class="learning-section checklist-section">
-                    <h2>Build Your First-Game Checklist</h2>
-
-                    <p>
-                        Every beginner starts somewhere!
-                        Answer a few questions to create
-                        a checklist for your first game.
+                    <p class="offer-note">
+                        Promotional pricing is subject to change.
+                        Check the retailer for current details.
                     </p>
 
-                    <form id="checklist-form">
-
-                        <fieldset>
-                            <legend>How much pickleball have you played?</legend>
-
-                            <label>
-                                <input type="radio" name="experience" value="new" required>
-                                I'm brand new!
-                            </label>
-
-                            <label>
-                                <input type="radio" name="experience" value="some">
-                                I've played a few times.
-                            </label>
-                        </fieldset>
-
-                        <div class="form-group">
-                            <label for="playing-location">Where will you be playing?</label>
-                            <select id="playing-location" name="location" required>
-                                <option value=""> Choose your court</option>
-                                <option value="indoor">Indoor Court</option>
-                                <option value="outdoor">Outdoor Court</option>
-                                <option value="unsure">Not sure yet</option>
-                            </select>
-                        </div>
+                </aside>
 
 
-                        <fieldset>
-                            <legend>Do you already have a pickleball paddle?</legend>
-
-                            <label>
-                                <input type="radio" name="paddle" value="yes" required>
-                                Yes, I'm ready!
-                            </label>
-
-                            <label>
-                                <input type="radio" name="paddle" value="no">
-                                Not yet, I need one.
-                            </label>
-                        </fieldset>
-
-
-                        <button type="submit" class="button">
-                            Create My Checklist
-                        </button>
-
-                    </form>
-
-                    <div id="checklist-result" class="checklist-result" aria-live="polite" hidden>
-
-                        <h3>Your First-Game Checklist</h3>
-
-                        <ul id="personalized-list"></ul>
-
-
-                        <aside id="paddle-recommendation" class="paddle-recommendation" hidden>
-
-                            <h4>Need a Paddle? We've Got a Pick!</h4>
-
-                            <p>
-                                Getting started doesn't have to mean
-                                spending a fortune. Friday Pickleball
-                                offers beginner-friendly carbon-fiber
-                                paddles at an affordable price.
-                            </p>
-
-                            <p class="paddle-deal">
-                                2 Friday Original Paddles for $99!
-                            </p>
-
-                            <p>
-                                Perfect for bringing a friend along
-                                or keeping an extra paddle handy.
-                            </p>
-
-                            <a href="https://fridaypickle.com/products/friday-paddle" target="_blank"
-                                rel="noopener noreferrer" class="button">
-                                Check Out Friday Paddles
-                            </a>
-
-                            <p class="offer-note">
-                                Promotional pricing is subject to change.
-                                Check the retailer for current details.
-                            </p>
-
-                        </aside>
-
-
-                        <button type="button" id="clear-checklist">
-                            Start Over
-                        </button>
-
-                    </div>
-                </section>
-
-
-
+                <button type="button" id="clear-checklist">
+                    Start Over
+                </button>
             </div>
 
         </section>
