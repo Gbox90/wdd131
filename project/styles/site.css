@@ -52,6 +52,8 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.75rem;
 }
 
 .logo {
@@ -60,3 +62,57 @@ header {
     font-weight: 700;
     text-decoration: none;
 }
+
+
+#menu-button {
+    background-color: var(--white);
+    color: var(--palm-green);
+    border: none;
+    border-radius: var(--small-radius);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.4rem 0.75rem;
+}
+
+#menu-button:focus-visible {
+    outline: 3px solid var(--mustard);
+    outline-offset: 3px;
+}
+
+
+#primary-nav {
+    display: none;
+    width: 100%;
+}
+
+#primary-nav.open {
+    display: block;
+}
+
+
+#primary-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#primary-nav a {
+    display: block;
+    color: var(--white);
+    text-decoration: none;
+    padding: 0.75rem 1rem;
+    border-radius: var(--small-radius);
+    font-weight: 500;
+}
+
+#primary-nav a:hover,
+#primary-nav a:focus-visible {
+    background-color: var(--leaf-green);
+}
+
+#primary-nav a[aria-current="page"] {
+    background-color: var(--leaf-green);
+    font-weight: 700;
+}
+
+
