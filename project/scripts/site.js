@@ -19,5 +19,178 @@ function toggleMenu() {
 }
 
 
-menuButton.addEventListener("click", toggleMenu);
+
+if (menuButton && navigation) {
+    menuButton.addEventListener("click", toggleMenu);
+}
+
+
+function displayCurrentYear() {
+    const yearElement = document.querySelector("#currentyear");
+
+    if (yearElement) {
+        yearElement.textContent = `${new Date().getFullYear()}`;
+    }
+}
+
+displayCurrentYear();
+
+
+const quizQuestions = [
+    {
+        question: "How many points are usually needed to win a game?",
+        answers: ["5 points", "11 points", "20 points"],
+        correctAnswer: 1,
+        explanation: "Most standard pickleball games are played to 11 points, and you must win by two."
+    },
+    {
+        question: "What is the kitchen?",
+        answers: [
+            "The area behind the baseline",
+            "The non-volley zone near the net",
+            "The space outside the court"
+        ],
+        correctAnswer: 1,
+        explanation: "The kitchen is the non-volley zone extending seven feet from the net."
+    },
+    {
+        question: "What does the two-bounce rule require?",
+        answers: [
+            "The ball must bounce twice on the same side",
+            "The ball must bounce once on each side before volleying",
+            "Every shot must bounce before being returned"
+        ],
+        correctAnswer: 1,
+        explanation: "The serve and the return must each bounce before players can volley."
+    },
+    {
+        question: "In traditional scoring, who can earn a point?",
+        answers: [
+            "Only the serving team",
+            "Only the receiving team",
+            "Both teams after every rally"
+        ],
+        correctAnswer: 0,
+        explanation: "In traditional side-out scoring, only the serving team can earn points."
+    }
+];
+
+
+let currentQuestion = 0;
+let quizScore = 0;
+
+const quizQuestion = document.querySelector("#quiz-question");
+const quizAnswers = document.querySelector("#quiz-answers");
+const quizProgress = document.querySelector("#quiz-progress");
+const quizFeedback = document.querySelector("#quiz-feedback");
+
+const nextButton = document.querySelector("#next-question");
+const restartButton = document.querySelector("#restart-quiz");
+
+
+function displayQuestion() {
+    const current = quizQuestions[currentQuestion];
+
+    quizQuestion.textContent = current.question;
+
+    quizProgress.textContent =
+        `Question ${currentQuestion + 1} of ${quizQuestions.length}`;
+
+    quizAnswers.innerHTML = "";
+    quizFeedback.textContent = "";
+
+    nextButton.hidden = true;
+
+    current.answers.forEach((answer, index) => {
+        const button = document.createElement("button");
+
+        button.type = "button";
+        button.classList.add("answer-button");
+        button.textContent = answer;
+
+        button.addEventListener("click", () => {
+            checkAnswer(index);
+        });
+
+        quizAnswers.appendChild(button);
+    });
+}
+
+
+function checkAnswer(selectedIndex) {
+    const current = quizQuestions[currentQuestion];
+
+    const isCorrect = selectedIndex === current.correctAnswer;
+
+    if (isCorrect) {
+        quizScore++;
+
+        quizFeedback.textContent =
+            `Correct! ${current.explanation}`;
+    } else {
+        quizFeedback.textContent =
+            `Not quite! ${current.explanation}`;
+    }
+
+    const answerButtons = quizAnswers.querySelectorAll("button");
+
+    answerButtons.forEach((button) => {
+        button.disabled = true;
+    });
+
+    nextButton.hidden = false;
+}
+
+
+function showNextQuestion() {
+    currentQuestion++;
+
+    if (currentQuestion < quizQuestions.length) {
+        displayQuestion();
+    } else {
+        displayResults();
+    }
+}
+
+
+function displayResults() {
+    quizProgress.textContent = "Quiz Complete!";
+
+    quizQuestion.textContent =
+        `You scored ${quizScore} out of ${quizQuestions.length}!`;
+
+    quizAnswers.innerHTML = "";
+
+    if (quizScore === quizQuestions.length) {
+        quizFeedback.textContent =
+            "Amazing! You've mastered the basics!";
+    } else {
+        quizFeedback.textContent =
+            "Nice work! Review the rules and try again to improve your score.";
+    }
+
+    nextButton.hidden = true;
+    restartButton.hidden = false;
+}
+
+
+function restartQuiz() {
+    currentQuestion = 0;
+    quizScore = 0;
+
+    restartButton.hidden = true;
+
+    displayQuestion();
+}
+
+
+if (quizQuestion && quizAnswers && quizProgress &&
+    quizFeedback && nextButton && restartButton) {
+
+    nextButton.addEventListener("click", showNextQuestion);
+
+    restartButton.addEventListener("click", restartQuiz);
+
+    displayQuestion();
+}
 

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Learn to Play Pickleball | Just A Little Pickle</title>
+
+    <meta name="description"
+        content="Learn beginner pickleball rules, serving, the kitchen, and scoring. Practice your knowledge with a fun interactive quiz.">
+
+    <meta name="author" content="Greisa Cajas">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/site.css">
+    <link rel="stylesheet" href="styles/site-large.css">
+
+    <script src="scripts/site.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+
+            <a href="index.html" class="logo">
+                Just A Little Pickle
+            </a>
+
+            <button id="menu-button" type="button" aria-label="Open navigation menu" aria-controls="primary-nav"
+                aria-expanded="false">
+                ☰
+            </button>
+
+
+            <nav id="primary-nav" aria-label="Main navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="learn.html" aria-current="page">Learn to Play</a></li>
+                    <li><a href="get-started.html">Get Started</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+    <main>
+
+        <section class="page-hero">
+
+            <p class="eyebrow">Pickleball 101</p>
+
+            <h1>Learn to Play</h1>
+
+            <p>
+                Every pickleball player starts somewhere!
+                Whether you're learning how to serve or trying
+                to understand the score, we've got you covered.
+                Let's break down the basics.
+            </p>
+
+        </section>
+
+
+        <section id="rules" class="learning-section">
+
+            <h2>The Basics of Pickleball</h2>
+
+            <p>
+                Before stepping onto the court, there are a
+                few important rules every beginner should know.
+            </p>
+
+            <div class="rules-grid">
+
+                <article class="rule-card">
+                    <h3>1. The Serve</h3>
+                    <p>
+                        Start behind the baseline and serve
+                        diagonally into the opposite service
+                        court. A traditional volley serve uses
+                        an upward motion with contact below
+                        the waist.
+                    </p>
+                </article>
+
+                <article class="rule-card">
+                    <h3>2. The Two-Bounce Rule</h3>
+                    <p>
+                        The serve must bounce before being
+                        returned. The return must also bounce
+                        before the serving team hits it.
+                        After that, players may volley.
+                    </p>
+                </article>
+
+                <article class="rule-card">
+                    <h3>3. The Kitchen</h3>
+                    <p>
+                        The kitchen is the non-volley zone,
+                        extending seven feet from the net
+                        on each side. You cannot volley
+                        the ball while standing in this zone.
+                    </p>
+                </article>
+
+                <article class="rule-card">
+                    <h3>4. Common Faults</h3>
+                    <p>
+                        Hitting the ball out of bounds,
+                        into the net, or allowing it to
+                        bounce twice are common faults
+                        that end a rally.
+                    </p>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <section id="scoring" class="learning-section">
+
+            <h2>Let's Talk Scoring!</h2>
+
+            <p>
+                Pickleball scoring might sound complicated
+                at first, but it gets easier with practice.
+                Here's how traditional doubles scoring works.
+            </p>
+
+            <div class="scoring-box">
+
+                <h3>Three Numbers, One Score</h3>
+
+                <p>
+                    In doubles, the score is called using
+                    three numbers:
+                </p>
+
+                <ol>
+                    <li>The serving team's score</li>
+                    <li>The receiving team's score</li>
+                    <li>The server number (1 or 2)</li>
+                </ol>
+
+                <p class="score-example">4 - 2 - 1</p>
+
+                <p>
+                    This means the serving team has four
+                    points, the receiving team has two,
+                    and the first server is serving.
+                </p>
+
+            </div>
+
+            <h3>Three Things to Remember</h3>
+
+            <ul>
+                <li>In traditional scoring, only the serving team earns points.</li>
+                <li>Most games are played to 11 points, and you must win by two.</li>
+                <li>At the beginning of a standard doubles game, the score is called 0-0-2.</li>
+            </ul>
+
+        </section>
+
+
+        <section class="learning-section quiz-section">
+
+            <h2>Test Your Pickleball Knowledge!</h2>
+
+            <p>
+                Think you've got the basics down?
+                Take this quick quiz to see what you've learned.
+            </p>
+
+            <div class="quiz-container">
+
+                <p id="quiz-progress"></p>
+
+                <h3 id="quiz-question"></h3>
+
+                <div id="quiz-answers"></div>
+
+                <p id="quiz-feedback" aria-live="polite"></p>
+
+                <button id="next-question" type="button" hidden>
+                    Next Question
+                </button>
+
+                <button id="restart-quiz" type="button" hidden>
+                    Try Again
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+
+
+    </main>
+
+    <footer>
+        <p>
+            &copy; <span id="currentyear"></span>
+            Just A Little Pickle
+        </p>
+
+        <p>
+            <a href="references.html">References</a>
+        </p>
+    </footer>
+
+</body>
+
+</html>
