@@ -247,3 +247,90 @@ function displayChecklist(preferences) {
     checklistResult.hidden = false;
 }
 
+
+function savePreferences(preferences) {
+    localStorage.setItem(
+        "pickleballPreferences",
+        JSON.stringify(preferences)
+    );
+}
+
+
+function handleChecklistSubmit(event) {
+    event.preventDefault();
+
+    const formData = new FormData(checklistForm);
+
+    const preferences = {
+        experience: formData.get("experience"),
+        location: formData.get("location"),
+        paddle: formData.get("paddle")
+    };
+
+    savePreferences(preferences);
+    displayChecklist(preferences);
+}
+
+
+function loadPreferences() {
+    const savedPreferences = localStorage.getItem(
+        "pickleballPreferences"
+    );
+
+    if (savedPreferences) {
+        const preferences = JSON.parse(savedPreferences);
+
+        const experienceOption = checklistForm.querySelector(
+            `input[name="experience"][value="${preferences.experience}"]`
+        );
+
+        const paddleOption = checklistForm.querySelector(
+            `input[name="paddle"][value="${preferences.paddle}"]`
+        );
+
+        const locationSelect = document.querySelector("#playing-location");
+
+        if (experienceOption) {
+            experienceOption.checked = true;
+        }
+
+        if (paddleOption) {
+            paddleOption.checked = true;
+        }
+
+        if (locationSelect) {
+            locationSelect.value = preferences.location;
+        }
+
+        displayChecklist(preferences);
+    }
+}
+
+
+function resetChecklist() {
+    localStorage.removeItem("pickleballPreferences");
+
+    checklistForm.reset();
+
+    personalizedList.innerHTML = "";
+
+    checklistResult.hidden = true;
+}
+
+
+if (checklistForm && checklistResult &&
+    personalizedList && clearChecklistButton) {
+
+    checklistForm.addEventListener(
+        "submit",
+        handleChecklistSubmit
+    );
+
+    clearChecklistButton.addEventListener(
+        "click",
+        resetChecklist
+    );
+
+    loadPreferences();
+}
+
