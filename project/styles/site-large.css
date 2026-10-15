@@ -63,3 +63,10 @@
         margin-right: auto;
     }
 }
+
+
+@media screen and (min-width: 700px) {
+    .rule-image picture {
+        aspect-ratio: 1000 / 474;
+    }
+}

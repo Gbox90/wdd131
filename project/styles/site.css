@@ -497,6 +497,13 @@ footer a:hover {
     border-radius: var(--small-radius);
 }
 
+
+.rule-image picture {
+    display: block;
+    aspect-ratio: 500 / 282;
+}
+
+
 .rule-image figcaption {
     color: var(--brown);
     font-size: 0.85rem;
