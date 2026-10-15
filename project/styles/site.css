@@ -384,3 +384,104 @@ footer a:hover {
 [hidden] {
     display: none !important;
 }
+
+
+#checklist-form {
+    background-color: var(--white);
+    border: var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 1.5rem;
+    display: grid;
+    gap: 1.5rem;
+}
+
+#checklist-form fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+    min-width: 0;
+}
+
+#checklist-form legend,
+.form-group > label {
+    color: var(--palm-green);
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+}
+
+#checklist-form fieldset label {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 0.75rem;
+    cursor: pointer;
+}
+
+#checklist-form input[type="radio"] {
+    accent-color: var(--palm-green);
+    width: 1.2rem;
+    height: 1.2rem;
+    flex-shrink: 0;
+}
+
+.form-group {
+    display: grid;
+    gap: 0.5rem;
+}
+
+.form-group select {
+    width: 100%;
+    max-width: 100%;
+    padding: 0.85rem;
+    border: 2px solid var(--palm-green);
+    border-radius: var(--small-radius);
+    background-color: var(--cream);
+    color: var(--ink);
+    font: inherit;
+}
+
+#checklist-form .button {
+    width: 100%;
+    margin-top: 0;
+    cursor: pointer;
+    font: inherit;
+    font-weight: 700;
+}
+
+#checklist-form :focus-visible,
+#clear-checklist:focus-visible {
+    outline: 3px solid var(--orange-dark);
+    outline-offset: 3px;
+}
+
+.checklist-result {
+    background-color: var(--cream-dark);
+    border: var(--border);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+.checklist-result h3 {
+    color: var(--palm-green);
+}
+
+.checklist-result li {
+    margin-bottom: 0.75rem;
+}
+
+#clear-checklist {
+    background-color: var(--palm-green);
+    color: var(--white);
+    border: none;
+    border-radius: var(--small-radius);
+    padding: 0.85rem 1.5rem;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+#clear-checklist:hover {
+    background-color: var(--leaf-green);
+}

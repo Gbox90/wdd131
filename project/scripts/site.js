@@ -194,3 +194,56 @@ if (quizQuestion && quizAnswers && quizProgress &&
     displayQuestion();
 }
 
+
+const checklistForm = document.querySelector("#checklist-form");
+const checklistResult = document.querySelector("#checklist-result");
+const personalizedList = document.querySelector("#personalized-list");
+const clearChecklistButton = document.querySelector("#clear-checklist");
+
+
+function createChecklist(preferences) {
+    const checklist = [
+        "Wear comfortable court shoes with good support.",
+        "Bring water to stay hydrated.",
+        "Wear comfortable clothing.",
+        "Arrive early to warm up."
+    ];
+
+    if (preferences.experience === "new") {
+        checklist.push("Review the basic rules and scoring.");
+    } else {
+        checklist.push("Practice your serves and returns.");
+    }
+
+    if (preferences.location === "indoor") {
+        checklist.push("Bring indoor pickleballs.");
+    } else if (preferences.location === "outdoor") {
+        checklist.push("Bring outdoor pickleballs and consider sun protection.");
+    } else {
+        checklist.push("Check whether your court is indoors or outdoors.");
+    }
+
+    if (preferences.paddle === "no") {
+        checklist.push("Borrow or purchase a beginner pickleball paddle.");
+    } else {
+        checklist.push("Pack your pickleball paddle.");
+    }
+
+    return checklist;
+}
+
+
+function displayChecklist(preferences) {
+    const checklist = createChecklist(preferences);
+
+    personalizedList.innerHTML = "";
+
+    checklist.forEach((item) => {
+        const listItem = document.createElement("li");
+        listItem.textContent = `${item}`;
+        personalizedList.appendChild(listItem);
+    });
+
+    checklistResult.hidden = false;
+}
+
