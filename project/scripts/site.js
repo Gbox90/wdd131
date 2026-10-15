@@ -199,6 +199,8 @@ const checklistForm = document.querySelector("#checklist-form");
 const checklistResult = document.querySelector("#checklist-result");
 const personalizedList = document.querySelector("#personalized-list");
 const clearChecklistButton = document.querySelector("#clear-checklist");
+const paddleRecommendation = document.querySelector("#paddle-recommendation");
+
 
 
 function createChecklist(preferences) {
@@ -233,6 +235,7 @@ function createChecklist(preferences) {
 }
 
 
+
 function displayChecklist(preferences) {
     const checklist = createChecklist(preferences);
 
@@ -240,12 +243,21 @@ function displayChecklist(preferences) {
 
     checklist.forEach((item) => {
         const listItem = document.createElement("li");
+
         listItem.textContent = `${item}`;
+
         personalizedList.appendChild(listItem);
     });
 
+    if (preferences.paddle === "no") {
+        paddleRecommendation.hidden = false;
+    } else {
+        paddleRecommendation.hidden = true;
+    }
+
     checklistResult.hidden = false;
 }
+
 
 
 function savePreferences(preferences) {
@@ -315,11 +327,14 @@ function resetChecklist() {
     personalizedList.innerHTML = "";
 
     checklistResult.hidden = true;
+
+    paddleRecommendation.hidden = true;
+
 }
 
 
 if (checklistForm && checklistResult &&
-    personalizedList && clearChecklistButton) {
+    personalizedList && clearChecklistButton && paddleRecommendation) {
 
     checklistForm.addEventListener(
         "submit",

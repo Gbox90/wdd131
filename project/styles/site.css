@@ -507,3 +507,37 @@ footer a:hover {
     text-align: center;
     margin-top: 0.5rem;
 }
+
+
+/* Optional paddle recommendation */
+
+.paddle-recommendation {
+    background-color: var(--white);
+    border: 2px solid var(--palm-green);
+    border-radius: var(--small-radius);
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.paddle-recommendation h4 {
+    color: var(--palm-green);
+    font-size: 1.2rem;
+    margin-top: 0;
+}
+
+.paddle-deal {
+    color: var(--palm-green);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.paddle-recommendation .button {
+    max-width: 100%;
+    text-align: center;
+}
+
+.offer-note {
+    font-size: 0.8rem;
+    color: var(--brown);
+    margin-top: 1rem;
+}
