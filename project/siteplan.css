@@ -106,3 +106,44 @@ footer {
 .intro p {
     margin: 1rem auto;
 }
+
+.wireframe-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.wireframe {
+    margin: 0;
+    text-align: center;
+}
+
+.wireframe h3 {
+    color: var(--palm-green);
+}
+
+.wireframe img {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin: 1rem auto;
+    border: 2px solid var(--palm-green);
+    border-radius: var(--small-radius);
+}
+
+.wireframe figcaption {
+    color: var(--brown);
+    font-size: 0.9rem;
+    font-style: italic;
+    margin-top: 0.75rem;
+}
+
+
+@media screen and (min-width: 768px) {
+    .wireframe-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        align-items: start;
+    }
+}
