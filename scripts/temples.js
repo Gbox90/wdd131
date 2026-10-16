@@ -6,6 +6,8 @@ menuButton.addEventListener('click', () => {
     menuButton.classList.toggle('open');
 });
 
+
+
 const currentYear = new Date().getFullYear();
 const yearElement = document.getElementById("currentyear");
 
