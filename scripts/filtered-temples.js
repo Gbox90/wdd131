@@ -4,6 +4,7 @@ const navigation = document.querySelector('nav');
 menuButton.addEventListener('click', () => {
     navigation.classList.toggle('open');
     menuButton.classList.toggle('open');
+    menuButton.setAttribute('aria-expanded', navigation.classList.contains('open'));
 });
 
 const temples = [
@@ -63,7 +64,29 @@ const temples = [
     imageUrl:
     "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
   },
-  // Add more temple objects here...
+  // Three additional temples selected for Week 04.
+  {
+    templeName: "Orlando Florida",
+    location: "Windermere, Florida, United States",
+    dedicated: "1994, October, 9",
+    area: 70000,
+    imageUrl: "https://newsroom.churchofjesuschrist.org/media/640x360/Orlando-Florida-Temple1.jpg"
+  },
+  {
+    templeName: "Provo Utah",
+    location: "Provo, Utah, United States",
+    dedicated: "1972, February, 9",
+    area: 130825,
+    // Historic photograph and floor area of the original Provo Utah Temple.
+    imageUrl: "https://newsroom.churchofjesuschrist.org/media/960x540/Provo-Utah-Temple3.jpg"
+  },
+  {
+    templeName: "Caracas Venezuela",
+    location: "Caracas, Venezuela",
+    dedicated: "2000, August, 20",
+    area: 15332,
+    imageUrl: "https://newsroom.churchofjesuschrist.org/media/960x540/772_08499000_p_600.jpg"
+  }
 ];
 
 const templeCards = document.querySelector("#temple-cards");
@@ -90,10 +113,11 @@ function displayTemples(templeList) {
 
         const image = document.createElement("img");
         image.src = temple.imageUrl;
-        image.alt = `${temple.templeName} Temple`;
+        image.alt = `${temple.templeName} Temple exterior`;
         image.loading = "lazy";
         image.width = 400;
         image.height = 250;
+        image.decoding = "async";
 
         card.append(
             name,
@@ -110,13 +134,31 @@ function displayTemples(templeList) {
 
 displayTemples(temples);
 
+function updateFilterTitle(title) {
+    document.querySelector("#page-title").textContent = title;
+    document.querySelectorAll("nav a").forEach((link) => {
+        if (link.textContent === title) {
+            link.setAttribute("aria-current", "page");
+        } else {
+            link.removeAttribute("aria-current");
+        }
+    });
+    navigation.classList.remove("open");
+    menuButton.classList.remove("open");
+    menuButton.setAttribute("aria-expanded", "false");
+}
+
+updateFilterTitle("Home");
+
 document.querySelector("#home").addEventListener("click", (event) => {
     event.preventDefault();
+    updateFilterTitle("Home");
     displayTemples(temples);
 });
 
 document.querySelector("#old").addEventListener("click", (event) => {
     event.preventDefault();
+    updateFilterTitle("Old");
 
     const oldTemples = temples.filter((temple) => {
         return Number(temple.dedicated.split(",")[0]) < 1900;
@@ -127,6 +169,7 @@ document.querySelector("#old").addEventListener("click", (event) => {
 
 document.querySelector("#new").addEventListener("click", (event) => {
     event.preventDefault();
+    updateFilterTitle("New");
 
     const newTemples = temples.filter((temple) => {
         return Number(temple.dedicated.split(",")[0]) > 2000;
@@ -137,6 +180,7 @@ document.querySelector("#new").addEventListener("click", (event) => {
 
 document.querySelector("#large").addEventListener("click", (event) => {
     event.preventDefault();
+    updateFilterTitle("Large");
 
     const largeTemples = temples.filter((temple) => {
         return temple.area > 90000;
@@ -147,6 +191,7 @@ document.querySelector("#large").addEventListener("click", (event) => {
 
 document.querySelector("#small").addEventListener("click", (event) => {
     event.preventDefault();
+    updateFilterTitle("Small");
 
     const smallTemples = temples.filter((temple) => {
         return temple.area < 10000;

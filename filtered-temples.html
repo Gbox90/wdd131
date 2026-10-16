@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Temple Album</title>
-    <meta name="description" content="This is a temple album of the Church of Jesus Christ of Latter-day Saints.">
+    <title>Filtered Temple Album | Greisa Cajas</title>
+    <meta name="description" content="Explore temples of The Church of Jesus Christ of Latter-day Saints and filter by dedication year or building size.">
     <meta name="author" content="Greisa Cajas">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,24 +21,24 @@
     <header>
         <span id="temple-album">Temple Album</span>
 
-        <button id="menu" aria-label="Navigation Menu"></button>
-        <nav>
+        <button id="menu" type="button" aria-label="Toggle navigation menu" aria-controls="temple-navigation" aria-expanded="false"></button>
+        <nav id="temple-navigation" aria-label="Temple filters">
             <ul>
-                <li><a href="index.html" id="home">Home</a></li>
-                <li><a href="temples.html" id="old">Old</a></li>
-                <li><a href="week02/media-query.html" id="new">New</a></li>
-                <li><a href="filler" id="large">Large</a></li>
-                <li><a href="filler" id="small">Small</a></li>
+                <li><a href="#" id="home">Home</a></li>
+                <li><a href="#" id="old">Old</a></li>
+                <li><a href="#" id="new">New</a></li>
+                <li><a href="#" id="large">Large</a></li>
+                <li><a href="#" id="small">Small</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <h2 id="page-title">Home</h2>
 
-        <div id="temple-cards"></div>
+        <div id="temple-cards" aria-live="polite"></div>
     </main>
     <footer>
-        <p>©<span id="currentyear"></span> Greisa Cajas. USA.</p>
+        <p>&copy; <span id="currentyear"></span> Greisa Cajas. USA.</p>
         <p><span id="lastModified"></span></p>
     </footer>
 
